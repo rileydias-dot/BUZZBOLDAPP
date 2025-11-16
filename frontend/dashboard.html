@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BuzzBold CRM</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>BuzzBold CRM</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="pages/profile.html" class="nav-item">
+                    <span class="icon">👤</span>
+                    <span>Profile</span>
+                </a>
+                <a href="pages/social.html" class="nav-item">
+                    <span class="icon">📱</span>
+                    <span>Social Media</span>
+                </a>
+                <a href="pages/reviews.html" class="nav-item">
+                    <span class="icon">⭐</span>
+                    <span>Reviews</span>
+                </a>
+                <a href="pages/invoices.html" class="nav-item">
+                    <span class="icon">💰</span>
+                    <span>Invoices</span>
+                </a>
+                <a href="pages/customers.html" class="nav-item">
+                    <span class="icon">👥</span>
+                    <span>Customers</span>
+                </a>
+                <a href="pages/leads.html" class="nav-item">
+                    <span class="icon">🎯</span>
+                    <span>Leads</span>
+                </a>
+                <a href="pages/tasks.html" class="nav-item">
+                    <span class="icon">✅</span>
+                    <span>Tasks</span>
+                </a>
+                <a href="pages/inbox.html" class="nav-item">
+                    <span class="icon">📧</span>
+                    <span>Inbox</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="btn btn-secondary btn-block">Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <h1>Dashboard</h1>
+                <div class="header-actions">
+                    <button class="btn btn-icon" id="notifications-btn">
+                        <span>🔔</span>
+                        <span class="badge" id="notification-count">0</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Metrics Cards -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">🎯</div>
+                    <div class="metric-content">
+                        <h3>Total Leads</h3>
+                        <p class="metric-value" id="total-leads">0</p>
+                        <span class="metric-label">Active leads in pipeline</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">👥</div>
+                    <div class="metric-content">
+                        <h3>Customers</h3>
+                        <p class="metric-value" id="total-customers">0</p>
+                        <span class="metric-label">Total customers</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">💰</div>
+                    <div class="metric-content">
+                        <h3>Revenue</h3>
+                        <p class="metric-value" id="total-revenue">$0</p>
+                        <span class="metric-label">Total revenue (paid)</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">⭐</div>
+                    <div class="metric-content">
+                        <h3>Reviews</h3>
+                        <p class="metric-value" id="avg-rating">0.0</p>
+                        <span class="metric-label">Average rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Recent Activity</h3>
+                    <div id="recent-activity" class="activity-list">
+                        <p class="loading">Loading...</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Upcoming Tasks</h3>
+                    <div id="upcoming-tasks" class="task-list">
+                        <p class="loading">Loading...</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card full-width">
+                    <h3>Revenue Trend</h3>
+                    <div id="revenue-chart">
+                        <p class="loading">Loading chart...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

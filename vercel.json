@@ -1,22 +1,7 @@
 {
   "version": 2,
-  "name": "buzzbold-crm",
-  "builds": [
-    {
-      "src": "frontend/**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/$1"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
-    }
-  ]
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": "frontend",
+  "cleanUrls": true,
+  "trailingSlash": false
 }

@@ -2,6 +2,16 @@
   "version": 2,
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": "frontend",
+  "rewrites": [
+    {
+      "source": "/api/auth/login",
+      "destination": "/api/auth/login.js"
+    },
+    {
+      "source": "/api/auth/register",
+      "destination": "/api/auth/register.js"
+    }
+  ],
   "cleanUrls": true,
   "trailingSlash": false
 }
